@@ -259,7 +259,7 @@ function reverseString(str) {
 
     // Invertiamo la disposizione degli elementi che compongono l' array.
 
-    var reverseArray = splitString.reverse();
+    var reverseArray = splitString.reverse("");
 
     // Uniamo tutti gli elementi dell' array invertiti per generare una stringa.
 
