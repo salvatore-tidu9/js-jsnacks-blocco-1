@@ -117,7 +117,7 @@
 // Dividi in due array separati le zucchine che misurano
 // meno o più di 15cm.
 // Infine stampa separatamente quanto pesano i due gruppi
-// di zucchine
+// di zucchine.
 
 
 // var gruppoZucchine_1 = [
@@ -251,21 +251,165 @@
 // argomento e la ritorni girata (es. Ciao -> oaiC).
 
 
-function reverseString(str) {
+// function reverseString(str) {
 
-    // Suddividiamo una stringa in un array di stringhe formato da sotto-stringhe della stringa iniziale.
+//     var splitString = str.split("");
 
-    var splitString = str.split("");
+//     var reverseArray = splitString.reverse("");
 
-    // Invertiamo la disposizione degli elementi che compongono l' array.
+//     return reverseArray.join("");
+// }
 
-    var reverseArray = splitString.reverse("");
+// var newString = reverseString(prompt("Inserisci la stringa di cui vuoi invertire la disposizione dei caratteri che la compongono."));
 
-    // Uniamo tutti gli elementi dell' array invertiti per generare una stringa.
+// console.log(newString);
 
-    return reverseArray.join("");
+// document.write(newString);
+
+
+//--------------------------------------------------------------------------------------------------
+
+
+// ---ESERCIZIO_1---
+
+// Generatore di “nomi cognomi” casuali: prendendo una lista
+// di nomi e una lista di cognomi, Gatsby vuole generare una
+// falsa lista di 3 invitati.
+
+
+var listaNomi = ["Antonio", "Lorenzo", "Gianluca", "Fabrizio", "Paolo"];
+
+var listaCognomi = ["Bianchi", "Moretti", "Rinaldi", "Marini", "Visconti"];
+
+var listaInvitati = [];
+
+
+for (var i = 0; i < 3; i++) {
+
+    nomeRandom = Math.floor(Math.random() * listaNomi.length);
+
+    cognomeRandom = Math.floor(Math.random() * listaCognomi.length);
+
+    listaInvitati.push(listaNomi[nomeRandom] + " " + listaCognomi[cognomeRandom]);
+
 }
 
-var newString = reverseString(prompt("Inserisci la stringa di cui vuoi invertire la disposizione dei caratteri che la compongono."));
+console.log(listaInvitati);
 
-console.log(newString);
+
+// ---ESERCIZIO_2---
+
+// Crea un array di numeri interi e fai la somma di tutti gli
+// elementi che sono in posizione dispari.
+
+
+var listaNumeri = [10, 35, 40, 72, 64, 52];
+
+console.log(listaNumeri);
+
+var somma = 0;
+
+for ( var i = 0; i < listaNumeri.length; i++) {
+
+    if(i % 2 != 0) {
+
+        somma += listaNumeri[i];
+    }
+}
+
+console.log("La somma dei numeri dell' array in posizione dispari è: " + somma);
+
+
+// ---ESERCIZIO_3---
+
+// Crea due array che hanno un numero di elementi diversi.
+// Aggiungi elementi casuali all’array che ha meno elementi,
+// fino a quando ne avrà tanti quanti l’altro.
+
+
+var array_1 = [10, 35, 58, 64, 32, 70, 13, 75, 80, 45];
+
+var array_2 = [11, 50, 30, 65];
+
+
+while (array_2.length < array_1.length) {
+
+    array_2.push(randomNumbers(1,100));
+}
+
+console.log(array_1, array_2);
+
+
+function randomNumbers(min, max) {
+
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+
+// ---ESERCIZIO_4---
+
+// Scrivi una funzione che fonda due array (aventi lo stesso
+// numero di elementi) prendendo alternativamente gli
+// elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+
+var array1 = ["a", "b", "c"];
+
+var array2 = [1, 2, 3];
+
+console.log(mergedArray(array1, array2));
+
+
+function mergedArray(arr1, arr2) {
+
+    var array3 = [];
+
+    for (var i = 0; i < 3; i++) {
+
+        array3.push(arr1[i]);
+
+        array3.push(arr2[i]);
+
+    }
+
+    return array3;
+
+};
+
+
+// ---ESERCIZIO_5---
+
+// // Scrivi una funzione che accetti tre argomenti:
+// // un array e due numeri (“a” più piccolo di “b” e “b” grande al
+// // massimo quanto il numero di elementi dell’array).
+// // La funzione ritornerà un nuovo array con i valori che
+// // hanno la posizione compresa tra “a” e “b”.
+
+
+var mainArray = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"];
+
+console.log(genArray(mainArray, 1, 6));
+
+
+function genArray(array, a, b) {
+
+    var nextArray = [];
+
+    if ((a < b) && (b < array.length)) {
+
+        for (var i = a; i <= b; i++) {
+
+            nextArray.push(array[i]);
+        }
+
+        return nextArray;
+    }
+
+    else {
+
+        return false;
+    }
+
+};
+
