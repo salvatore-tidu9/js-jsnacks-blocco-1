@@ -286,9 +286,9 @@ var listaInvitati = [];
 
 for (var i = 0; i < 3; i++) {
 
-    nomeRandom = Math.floor(Math.random() * listaNomi.length);
+    var nomeRandom = Math.floor(Math.random() * listaNomi.length);
 
-    cognomeRandom = Math.floor(Math.random() * listaCognomi.length);
+    var cognomeRandom = Math.floor(Math.random() * listaCognomi.length);
 
     listaInvitati.push(listaNomi[nomeRandom] + " " + listaCognomi[cognomeRandom]);
 
@@ -412,4 +412,6 @@ function genArray(array, a, b) {
     }
 
 }
+
+
 
