@@ -375,16 +375,16 @@ function mergedArray(arr1, arr2) {
 
     return array3;
 
-};
+}
 
 
 // ---ESERCIZIO_5---
 
-// // Scrivi una funzione che accetti tre argomenti:
-// // un array e due numeri (“a” più piccolo di “b” e “b” grande al
-// // massimo quanto il numero di elementi dell’array).
-// // La funzione ritornerà un nuovo array con i valori che
-// // hanno la posizione compresa tra “a” e “b”.
+// Scrivi una funzione che accetti tre argomenti:
+// un array e due numeri (“a” più piccolo di “b” e “b” grande al
+// massimo quanto il numero di elementi dell’array).
+// La funzione ritornerà un nuovo array con i valori che
+// hanno la posizione compresa tra “a” e “b”.
 
 
 var mainArray = ["item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8"];
@@ -411,5 +411,5 @@ function genArray(array, a, b) {
         return false;
     }
 
-};
+}
 
